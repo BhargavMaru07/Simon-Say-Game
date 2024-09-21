@@ -9,7 +9,7 @@ let h2 = document.querySelector("h2");
 let span = document.querySelector("span");
 
 
-// Start game with double-click
+
 document.addEventListener("dblclick", function () {
     if (!started) {
         started = true;
@@ -19,7 +19,7 @@ document.addEventListener("dblclick", function () {
 });
 
 
-// Progress to the next level
+
 function levelup() {
     userseq = []; // Reset user's sequence
     level++; // Increment level
@@ -43,14 +43,13 @@ function btnflash(btn) {
 }
 
 
-//click event listeners to all buttons
+
 let allbtns = document.querySelectorAll(".btn");
 for (let pbtn of allbtns) {
     pbtn.addEventListener("click", btnpress);
 }
 
 
-// Handle button press
 function btnpress() {
     if (started) {
         let btn = this;
@@ -81,7 +80,7 @@ function checkans(idx) {
     }
 }
 
-// Reset game 
+
 function reset() {
     started = false;
     gameseq = [];
